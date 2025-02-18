@@ -17,12 +17,7 @@ const __dirname = path.resolve()
 const app = express()
 
 
-app.get('/', (_, res) =>{
-    return res.status(200).json({
-        age: 23,
-        name :"Aabhiskjdode diwjowi n feio nk"
-    })
-})
+
 
 
 app.use(cors({
