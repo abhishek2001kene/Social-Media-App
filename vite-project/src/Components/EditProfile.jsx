@@ -48,7 +48,7 @@ const updateAvatar = async () => {
     formData.append("avatar", avatar);
 
     const response = await axios.post(
-      "http://localhost:7000/api/v1/users/avatar",
+      "https://social-media-app-1-osd3.onrender.com/api/v1/users/avatar",
       formData,
       {
         headers: { "Content-Type": "multipart/form-data" },
@@ -100,7 +100,7 @@ const updateAvatar = async () => {
     try {
         setLoading(true);
         const response = await axios.post(
-            "http://localhost:7000/api/v1/users/profile/edit",
+            "https://social-media-app-1-osd3.onrender.com/api/v1/users/profile/edit",
             { username, fullName, bio },
             {
                 headers: { "Content-Type": "application/json" },

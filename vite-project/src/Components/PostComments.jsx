@@ -20,7 +20,7 @@ function PostComments({ post, Postcomments, setPostcomments }) {
     const getAllPostComments = async () => {
         try {
             const response = await axios.get(
-                `http://localhost:7000/api/v1/post/${post._id}/comment/all`,
+                `https://social-media-app-1-osd3.onrender.com/api/v1/post/${post._id}/comment/all`,
                 { withCredentials: true }
             );
             if (response.data) {
@@ -35,7 +35,7 @@ function PostComments({ post, Postcomments, setPostcomments }) {
         if (!text.trim()) return;
         try {
             const response = await axios.post(
-                `http://localhost:7000/api/v1/post/${post._id}/comment`,
+                `https://social-media-app-1-osd3.onrender.com/api/v1/post/${post._id}/comment`,
                 { text },
                 {
                     withCredentials: true,
@@ -46,7 +46,6 @@ function PostComments({ post, Postcomments, setPostcomments }) {
             if (response.data) {
                 showToast('Comment added successfully', 'success');
                 setText('');
-
                
                 getAllPostComments();
 

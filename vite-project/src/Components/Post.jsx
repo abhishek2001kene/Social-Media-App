@@ -26,7 +26,7 @@ function Post({ post }) {
       const action = like ? "dislike" : "like";
 
       const response = await axios.get(
-        `http://localhost:7000/api/v1/post/${post._id}/${action}`,
+        `https://social-media-app-1-osd3.onrender.com/api/v1/post/${post._id}/${action}`,
         { withCredentials: true }
       );
 

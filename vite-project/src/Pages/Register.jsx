@@ -16,7 +16,7 @@ function Register() {
     try {
       setloading(true);
       const response = await axios.post(
-        "http://localhost:7000/api/v1/users/register",
+        "https://social-media-app-1-osd3.onrender.com/api/v1/users/register",
         { username, email, password },
         {
           headers: { "Content-Type": "application/json" },
