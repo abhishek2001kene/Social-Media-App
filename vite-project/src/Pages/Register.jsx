@@ -19,6 +19,7 @@ function Register() {
         "https://social-media-app-1-osd3.onrender.com/api/v1/users/register",
         { username, email, password },
         {
+          withcredencials : true
           headers: { "Content-Type": "application/json" },
          
         }
